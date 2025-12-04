@@ -2,7 +2,6 @@
 #define PAGER_H
 
 #include "constants.h"
-#include <stdint.h>
 
 typedef struct {
   int file_descriptor;

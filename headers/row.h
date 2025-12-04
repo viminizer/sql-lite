@@ -1,7 +1,6 @@
 #ifndef ROW_H
 #define ROW_H
-#include "table.h"
-#include <stdint.h>
+#include "constants.h"
 
 typedef struct {
   uint32_t id;
@@ -9,6 +8,8 @@ typedef struct {
   char email[COLUMN_EMAIL_SIZE + 1];
 } Row;
 
-void *row_slot(Table *table, uint32_t row_num);
+void serialize_row(Row *source, void *destination);
+void deserialize_row(void *source, Row *destination);
+void print_row(Row *row);
 
 #endif // ROW_H

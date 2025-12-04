@@ -1,11 +1,8 @@
 #include "headers/pager.h"
 #include <errno.h>
 #include <fcntl.h>
-#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/_types/_off_t.h>
-#include <sys/_types/_ssize_t.h>
 #include <unistd.h>
 
 Pager *pager_open(const char *filename) {
