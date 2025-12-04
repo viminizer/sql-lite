@@ -3,14 +3,16 @@
 This project follows a clean and modular C architecture.  
 All source files, headers, the main application entry point, and build artifacts are separated for clarity and scalability.
 
+```
 project/
 │
-├── src/ # All module .c files
-├── include/ # All .h header files
-├── app/ # main.c entry point
-├── build/ # Compiled output (objects, executable)
-├── Makefile # Optional, if using Make instead of CMake
+├── src/       # All module .c files
+├── include/   # All .h header files
+├── app/       # main.c entry point
+├── build/     # Compiled output (objects, executable)
+├── Makefile   # Optional, if using Make instead of CMake
 └── README.md
+```
 
 ## Overview
 
@@ -50,10 +52,6 @@ Some IDEs and tools (like clangd or VSCode C/C++ extensions) require a `compile_
 ```bash
 mkdir -p build
 cd build
-```
-
-```
-
 ```
 
 2. Run CMake with compile_commands.json export enabled:
