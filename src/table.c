@@ -15,6 +15,7 @@ Table *db_open(const char *filename) {
     // new db file
     void *root_node = get_page(pager, 0);
     initialize_leaf_node(root_node);
+    set_node_root(root_node, true);
   }
   return table;
 }
@@ -30,9 +31,6 @@ void *row_slot(Table *table, uint32_t row_num) {
 ExecuteResult execute_insert(Statement *statement, Table *table) {
   void *node = get_page(table->pager, table->root_page_num);
   uint32_t num_cells = *(leaf_node_num_cells(node));
-  if (num_cells >= LEAF_NODE_MAX_CELLS) {
-    return EXECUTE_TABLE_FULL;
-  }
   Row *row_to_insert = &(statement->row_to_insert);
   uint32_t key_to_insert = row_to_insert->id;
   Cursor *cursor = table_find(table, key_to_insert);
