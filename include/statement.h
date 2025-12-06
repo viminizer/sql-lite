@@ -1,7 +1,6 @@
 #ifndef STATEMENT_H
 #define STATEMENT_H
 
-#include "buffer.h"
 #include "result.h"
 #include "row.h"
 

@@ -2,5 +2,6 @@
 #define UTILS_H
 
 void print_prompt();
+void print_constants();
 
 #endif

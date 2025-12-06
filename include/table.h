@@ -2,11 +2,11 @@
 #define TABLE_H
 
 #include "pager.h"
-#include "result.h"
 #include "statement.h"
 
 typedef struct {
   uint32_t num_rows;
+  uint32_t root_page_num;
   Pager *pager;
 } Table;
 
